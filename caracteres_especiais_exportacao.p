@@ -1,0 +1,11 @@
+DEFINE STREAM my_stream.
+
+OUTPUT STREAM my_stream TO "000013653_utf8.txt"
+    CONVERT SOURCE "ISO8859-1" TARGET "UTF-8"
+    .
+
+FOR EACH customer:
+    EXPORT customer.
+END.
+
+OUTPUT CLOSE.
