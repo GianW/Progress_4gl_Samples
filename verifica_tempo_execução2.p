@@ -1,0 +1,11 @@
+
+ETIME(true).
+
+FOR EACH ped-venda NO-LOCK:
+END.
+ 
+IF ETIME < 60000 then
+  MESSAGE ETIME / 1000 "segundos" VIEW-AS ALERT-BOX.
+ELSE
+  MESSAGE ETIME / 60000 "minutos" VIEW-AS ALERT-BOX.
+
