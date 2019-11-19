@@ -3,9 +3,9 @@ DEF VAR cont AS INT NO-UNDO.
 
 UPDATE nomeCampo LABEL "Pesquisar campo:".
 
-for each _field where
+FOR EACH _field WHERE
          _field._field-name = nomeCampo NO-LOCK,
-    FIRST _file where
+    FIRST _file WHERE
       recid(_file) = _field._file-recid NO-LOCK:
 
     
